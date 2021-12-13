@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>nevbar</title>
+        <style>
+           :root {
+  --animation-speed: 2s;
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --background-color: #212121;
+  --text-color: #fff;
+  --font: sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--background-color);
+  font-family: var(--font);
+}    
+            a{
+                text-decoration: none;
+            }
+            .nav_list > li{
+                position: relative;
+                margin: 8px 0;
+            }
+            .nav_list > li > a{
+                color: aqua;
+                text-align: center;
+            }
+            .nav_list > li > a p{
+                text-transform: uppercase;
+
+            }
+            .nav_list > li> a > .link {
+                font-size: 2rem;
+                transition: opacity 300ms ease-in-out;
+
+            }
+            .nav_list > li > a > .hidden{
+                position: absolute;
+                z-index: 10;
+                left: 50%;
+                top: 50%;
+                transform: -50%, -50%;
+                color: #fff;
+                text-align: center;
+                text-shadow: 0 0 7px #ffd, 0 0 10px #fff
+                0 0 21px #fff, 0 0 42px #0fa,
+                0 0 82px #0fa, 0 0 92px #0fa
+                0 0 102px #0fa, 0 0 151px #0fa;
+                background: transparent;
+        
+                opacity: 0;
+                letter-spacing: 50px;
+                pointer-events: none;
+            }
+            .nav_list > li > a:hover > .link {
+  opacity: 0.3;
+}
+
+
+.nav_list > li > a:hover > .hidden_link {
+  animation: show-link 400ms ease-in-out forwards;
+}
+
+@keyframes show-link {
+  to {
+    opacity: 1;
+    letter-spacing: 5px;
+    pointer-events: all;
+  }
+}
+ 
+</style>
+    </head>
+    <body>
+
+        <nav class="navbar">
+            <ul class="nav_list">
+              <li>
+                <a href="#">
+                  <p class="link">home</p>
+                  <p class="hidden_link">home</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="link">about</p>
+                  <p class="hidden_link">about</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="link">Pricing</p>
+                  <p class="hidden_link">Pricing</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="link">Features</p>
+                  <p class="hidden_link">Features</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="link">Products</p>
+                  <p class="hidden_link">Products</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+    </body>
+</html>
+
+          
+           
+           
+    
