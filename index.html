@@ -1,98 +1,126 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>
-            pondhaya
-        </title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="css/home.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="header">
-      <div class="logo">
-        <img src="img/pondhaya1.png" alt="pondhaya" />
-      </div>
-      <div class="head_title">
-        <h1>Sri Pondhaya Agencies</h1>
-      </div>
-      <div class="head_new">
-        <ul>
-          <li><a class="active" href="#home">home</a></li>
-          <li><a href="#about us">about us</a></li>
-          <li class="dropdown">
-            <a class="dropbtn">products</a>
-            <div class="dropdown-content">
-              <a href="#">food products</a>
-              <a href="#">pure ground spices</a>
-              <a href="#">masala powders</a>
-              <a href="#">easy masala mix</a>
-              <a href="#">cruchy snacks mixes</a>
-            </div>
-          </li>
-          <li><a href="#">contact</a></li>
-        </ul>
-      </div>
-    </div>
+    <head>
+        <title>nevbar</title>
+        <style>
+           :root {
+  --animation-speed: 2s;
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --background-color: #212121;
+  --text-color: #fff;
+  --font: sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--background-color);
+  font-family: var(--font);
+}    
+            a{
+                text-decoration: none;
+            }
+            .nav_list > li{
+                position: relative;
+                margin: 8px 0;
+            }
+            .nav_list > li > a{
+                color: aqua;
+                text-align: center;
+            }
+            .nav_list > li > a p{
+                text-transform: uppercase;
 
-    <div class="bg">
-      <div class="img">
-        <img src="add.jpg" />
-      </div>
-     
-        <ul>
-          <li>deeban oi</li>
-          <li>rock Salt</li>
-          <li>RBD palm oil</li>
-          <li>RBD sunfelower oil</li>
-        </ul>
-      <div class="our_products">
-        <h1>Our products</h1>
+            }
+            .nav_list > li> a > .link {
+                font-size: 2rem;
+                transition: opacity 300ms ease-in-out;
+
+            }
+            .nav_list > li > a > .hidden{
+                position: absolute;
+                z-index: 10;
+                left: 50%;
+                top: 50%;
+                transform: -50%, -50%;
+                color: #fff;
+                text-align: center;
+                text-shadow: 0 0 7px #ffd, 0 0 10px #fff
+                0 0 21px #fff, 0 0 42px #0fa,
+                0 0 82px #0fa, 0 0 92px #0fa
+                0 0 102px #0fa, 0 0 151px #0fa;
+                background: transparent;
         
-        
-        </div>
-        <div class="image">
-          <img src="img/Untitled-1.jpg" alt="Untitled-1" style="width: 100%;">
-          <h2>Deebam oil</h2>
-          <p>500L,1l</p>
-        </div>
-        <div class="image">
-          <img src="img/untitled-2.jpg"alt="untitled-2" style="width: 100%;">
-          <h2>Rock Salt</h2>
-          <p>1kg</p>
-        </div>
-        <div class="image">
-          <img src="img/untitled-3.jpg" alt="untitled-3" style="width: 100%;">
-          <h2>Jaggery Powder</h2>
-          <p>500g,1kg</p>
-        </div>
-        <div class="image">
-          <img src="img/Untitled-4.jpg" alt="untitled-4" style="width: 100%;">
-          <h2>RBD Palm oil</h2>
-          <p>1L,5L</p>
-        </div>
-        <div class="image">
-          <img src="img/Untitled-5.jpg" alt="untitled-5" style="width: 100%;">
-          <h2>RBD Sunflower oli</h2>
-          <p>1L,5L</p>
-        </div>
-      </div>
-      <div >
-        <button 
-        class="order_now"type="button">oduer now</button>
-      </div>  
-      <div class="img1">
-          <img src="img/image.jpg">
-      </div>
-      <div class="footer">
-        <p>Copyright © 2017 pondaya Agencies. Web Solutions By  <a href="www.zdemo.in" >zop technologys</a></p>
-      </div> 
-      <div class="" 
-
-     
+                opacity: 0;
+                letter-spacing: 50px;
+                pointer-events: none;
+            }
+            .nav_list > li > a:hover > .link {
+  opacity: 0.3;
+}
 
 
-    
-    </div>
-  </body>
+.nav_list > li > a:hover > .hidden_link {
+  animation: show-link 400ms ease-in-out forwards;
+}
+
+@keyframes show-link {
+  to {
+    opacity: 1;
+    letter-spacing: 5px;
+    pointer-events: all;
+  }
+}
+ 
+</style>
+    </head>
+    <body>
+
+        <nav class="navbar">
+            <ul class="nav_list">
+              <li>
+                <a href="#">
+                  <p class="link">home</p>
+                  <p class="hidden_link">home</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="link">about</p>
+                  <p class="hidden_link">about</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="link">Pricing</p>
+                  <p class="hidden_link">Pricing</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="link">Features</p>
+                  <p class="hidden_link">Features</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="link">Products</p>
+                  <p class="hidden_link">Products</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+    </body>
 </html>
+
+          
+           
+           
+    
