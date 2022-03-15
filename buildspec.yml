@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - npm --version && node --version
+      - npm ci
+  build:
+    commands:
+      - echo Build started on `date`
+      - sh deploy-site.sh $S3_LOCATION $DISTRIBUTION_ID
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'dist/'
